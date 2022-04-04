@@ -1,0 +1,6 @@
+db_ReDjango/
+.idea/
+app_react/node_modules
+app_react/build
+.env
+.vscode

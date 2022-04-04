@@ -1,0 +1,14 @@
+asgiref==3.4.1
+backports.zoneinfo==0.2.1
+Django==4.0
+mysqlclient
+sqlparse==0.4.2
+django-mysql
+Pillow
+djangorestframework
+djoser
+djangorestframework_simplejwt
+dj_database_url
+psycopg2==2.8.6
+django-cors-headers
+python-decouple

@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  web:
+    container_name: "Back_ReDjango"
+    build: ./web
+    volumes:
+      - .:/BackEnd
+    ports:
+      - "8090:8091"
+    depends_on:
+      - db
+    networks:
+      - web
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+  db:
+    image: mysql:8.0.27
+    container_name: "db_ReDjango"
+    ports:
+      - "3310:3306"
+    environment:
+      MYSQL_DATABASE: 'db_ReDjango'
+      MYSQL_USER: 'viktor'
+      MYSQL_PASSWORD: '14051998'
+      MYSQL_ROOT_PASSWORD: 'password'
+    restart: always
+    networks:
+      - web
+    volumes:
+      - ./db_ReDjango:/var/lib/mysql
+
+networks:
+  web:
+    driver: bridge
