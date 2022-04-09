@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User
+from .models import *
 from django.contrib.auth.admin import UserAdmin
 from django.forms import TextInput, Textarea, CharField
 from django import forms
@@ -29,4 +29,19 @@ class UserAdminConfig(UserAdmin):
     )
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
+    list_display = ("title",)
+    list_display_links = ("title",)
+
+
+class CityAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
+    list_display = ("title",)
+    list_display_links = ("title",)
+
+
 admin.site.register(User, UserAdminConfig)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(City, CityAdmin)
+admin.site.register(Number)

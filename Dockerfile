@@ -7,6 +7,7 @@ RUN mkdir /BackEnd
 WORKDIR /BackEnd
 
 COPY requirements.txt /BackEnd
+COPY .env /user/bin/
 
 RUN  pip install --upgrade pip && pip install -r requirements.txt
 
