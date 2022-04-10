@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
-    path("api/user/", include("user.urls"))
+    path("api/user/", include("user.urls")),
+    path("api/products/", include("products.urls")),
+    path("api/contact_info/", include("contact_info.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
