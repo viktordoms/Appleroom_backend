@@ -2,3 +2,4 @@ db_ReDjango/
 .idea/
 .env
 .vscode
+BackEnd/BackEnd/__pycache__/

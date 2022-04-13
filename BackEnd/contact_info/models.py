@@ -15,8 +15,8 @@ class Number(models.Model):
 class City(models.Model):
     title = models.CharField("Місто", max_length=50)
     slug = models.SlugField(max_length=160, unique=True)
-    number = models.ManyToManyField(
-        Number, verbose_name="Номер", null=True
+    numbers = models.ManyToManyField(
+        Number, verbose_name="Номер"
     )
 
     def __str__(self):

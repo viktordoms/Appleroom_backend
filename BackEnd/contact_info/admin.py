@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import City, Number
 
+
 # Register your models here.
 
 class CityAdmin(admin.ModelAdmin):
