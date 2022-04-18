@@ -8,7 +8,7 @@ from .models import City
 from .serializers import MainInfoSerializer
 
 
-class MainInfoView(ListAPIView):
+class CityInfoView(ListAPIView):
     permission_classes = [AllowAny]
     queryset = City.objects.all()
     serializer_class = MainInfoSerializer

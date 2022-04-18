@@ -1,7 +1,7 @@
 from django.urls import include, path
 
-from .views import MainInfoView
+from .views import CityInfoView
 
 urlpatterns = [
-    path("info/", MainInfoView.as_view())
+    path("city/", CityInfoView.as_view())
 ]
