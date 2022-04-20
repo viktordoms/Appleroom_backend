@@ -3,7 +3,7 @@ version: "3"
 services:
   web:
     container_name: "Back_ReDjango"
-    build: ./web
+    build: ./
     volumes:
       - .:/BackEnd
     ports:
