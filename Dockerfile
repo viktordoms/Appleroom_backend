@@ -11,4 +11,4 @@ COPY .env /user/bin/
 
 RUN  pip install --upgrade pip && pip install -r requirements.txt
 
-CMD ./wait-for-it.sh  db:3306 --  python3 ./BackEnd/manage.py runserver 0.0.0.0:8091
+CMD ./wait-for-it.sh  db:3306 --  python3 ./BackEnd/manage.py runserver 52.57.8.153:8091

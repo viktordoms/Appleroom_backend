@@ -10,5 +10,5 @@ from .serializers import MainInfoSerializer
 
 class CityInfoView(ListAPIView):
     permission_classes = [AllowAny]
-    queryset = City.objects.all()
+    queryset = City.objects.filter
     serializer_class = MainInfoSerializer
